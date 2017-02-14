@@ -8,7 +8,16 @@
             $input = 128;
 
             $result = $test_Allergen->findAllergen($input);
-            $this->assertEquals("cats", $result);
+            $this->assertEquals(["cats"], $result);
+        }
+
+        function test_twoAllergenCombo()
+        {
+            $test_Allergen = new Allergen;
+            $input = 71;
+
+            $result = $test_Allergen->findAllergen($input);
+            $this->assertEquals(["cats", "peanuts"], $result);
         }
     }
 ?>
