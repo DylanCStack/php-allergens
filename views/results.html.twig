@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Allergies</title>
+    </head>
+    <body>
+        <div class="container">
+
+            {% for allergen in allergens%}
+            <ul>
+            <li>{{allergen}}</li>
+            </ul>
+            {% endfor %}
+            <p><a href="/">Home</a></p>
+        </div>
+    </body>
+</html>
